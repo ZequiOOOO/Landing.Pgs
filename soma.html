@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça sua Simulação</title>
+</head>
+        
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script>
+              // Inicialize o EmailJS com seu User ID
+              (function() {
+                emailjs.init("1HbEAt_Px9nQAVmlb"); // Substitua pelo seu User ID
+              })();
+            </script>
+<style>
+    
+    
+    #contato{
+    background-color: darkseagreen;
+}
+
+
+  /* Estilos para a calculadora */
+.calculator-section {
+    background: rgba(10, 27, 80, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 4px solid #37b8f5;
+}
+
+.calculator-section h3 {
+    color: #0a1b50;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #0a1b50;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.cta {
+    background-color: #0a1b50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.cta:hover {
+    background-color: #37b8f5;
+}
+
+</style>
+<body>
+    
+  <div class="section" id="contato">
+    <h2>Simulador de Energia Solar</h2>
+    <p>Preencha os dados para simular sua economia:</p>
+    <p>Ah, você consegue ver seu consumo(kWh) em sua conta de luz, ela estara proximo do valor total.<span style='font-size:16px;'>&#129321;</span></p>
+    
+    <form id="simuladorForm">
+       
+        <div class="form-group">
+            <label for="nome">Nome*:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email*:</label>
+            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+        </div>
+        
+        
+        <div class="calculator-section">
+            <h3>📊 Dados de Consumo</h3>
+            
+            <div class="form-group">
+                <label for="estado">Estado*:</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Selecione...</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SP">São Paulo</option>
+                    
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="cidade">Cidade*:</label>
+                <input type="text" id="cidade" name="cidade" required placeholder="Sua cidade">
+            </div>
+            
+            <div class="form-group consumo-wrapper">
+                <label for="consumo">Consumo Médio (kWh/mês)*:</label>
+                <input type="number" id="consumo" name="consumo" required placeholder="Ex: 300">
+            </div>
+        </div>
+        
+
+        <div id="resultado-calculadora" style="display:none; margin-top:20px; padding:15px; background:#f0f8ff; border-radius:8px;"></div>
+        
+        <button type="button" class="cta" onclick="calcularEEnviar()">Calcular Economia</button>
+      </form>
+    </div>
+
+    <script>
+        function calcularEEnviar() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const estado = document.getElementById('estado').value;
+            const cidade = document.getElementById('cidade').value;
+            const consumo = parseFloat(document.getElementById('consumo').value);
+        
+            if (!nome || !email || !estado || !cidade || !consumo || isNaN(consumo)) {
+                alert("Por favor, preencha todos os campos corretamente!");
+                return;
+            }
+        
+            const potenciaSistema = (consumo * 1.2).toFixed(2); 
+            const economiaMensal = (consumo * 0.8).toFixed(2); 
+            const economiaAnual = (economiaMensal * 12).toFixed(2);
+        
+            const resultadoDiv = document.getElementById('resultado-calculadora');
+            resultadoDiv.style.display = 'block';
+            resultadoDiv.innerHTML = `
+                <h4 style="color:#0a1b50; margin-bottom:10px;">📈 Resultado da Simulação</h4>
+                <p><strong>Potência do Sistema:</strong> ${potenciaSistema} kWp</p>
+                <p><strong>Economia Mensal:</strong> R$ ${economiaMensal}</p>
+                <p><strong>Economia Anual:</strong> R$ ${economiaAnual}</p>
+                <p style="margin-top:10px; font-size:0.9em;">*Valores estimados</p>
+            `;
+        
+            resultadoDiv.scrollIntoView({ behavior: 'smooth' });
+        
+         
+  const templateParams = {
+    nome: nome,
+    email: email,
+    estado: estado,
+    cidade: cidade,
+    consumo: consumo,
+    potenciaSistema: potenciaSistema,
+    economiaMensal: economiaMensal,
+    economiaAnual: economiaAnual
+  };
+
+  emailjs.send(
+    'service_pupr11l', 
+    'template_qh8i44k', 
+    templateParams
+  ).then(
+    (response) => {
+      console.log('E-mail enviado!', response.status, response.text);
+      alert('Simulação enviada com sucesso! Entraremos em contato em breve.');
+    },
+    (error) => {
+      console.error('Falha no envio:', error);
+      alert('Ocorreu um erro. Tente novamente mais tarde.');
+    }
+  );
+}
+
+
+        </script>
+
+
+    
+</body>
+</html>
