@@ -4,82 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça sua Simulação</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="icon.logo/Logo (Icon).ico" type="image/png">
+
 </head>
         
-            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-            <script>
-              // Inicialize o EmailJS com seu User ID
-              (function() {
-                emailjs.init("1HbEAt_Px9nQAVmlb"); // Substitua pelo seu User ID
-              })();
-            </script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    (function() {
+        emailjs.init("1HbEAt_Px9nQAVmlb"); 
+    })();
+</script>
 <style>
+  #contato{
+      border: 18px groove #276976;
+      background: linear-gradient(54deg,  #0a1b50, #070a61c4);
+    }
+    h2{
+      text-transform: uppercase;
+    }
+
+    h2,  p{
+      color: white;
+    }
+    .bi-whatsapp{
+  color: #2bff00;
+ }
+ svg{
+      color: yellow;
+    }
+    h4, a{
+      text-transform: uppercase;
+      color: #ffffff ;
+    }
     
-    
-    #contato{
-    background-color: darkseagreen;
-}
+    /* cor calculadora */
+    .calculator-section {
+        background:rgb(15 38 110 / 0%);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        border-left: 4px solid #2b3b42;
+    }
 
+    .calculator-section h3 {
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
 
-  /* Estilos para a calculadora */
-.calculator-section {
-    background: rgba(10, 27, 80, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    border-left: 4px solid #37b8f5;
-}
+    .form-group {
+        margin-bottom: 15px;
+    }
 
-.calculator-section h3 {
-    color: #0a1b50;
-    margin-bottom: 15px;
-}
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #ffffff;
+    }
 
-.form-group {
-    margin-bottom: 15px;
-}
+    .form-group input,
+    .form-group select {
+        width: 98%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-    color: #0a1b50;
-}
+    .cta {
+        background-color: #ffffff;
+        color: rgb(2, 2, 2);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
 
-.form-group input,
-.form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
+    .cta:hover {
+        background-color: #37b8f5;
+    }
+ 
+    #resultado-calculadora {
+        display: none;
+        margin-top: 20px;
+        padding: 15px;
+        background: #fcfcfc;
+        border-radius: 8px;
+        text-transform: uppercase;
+    }
 
-.cta {
-    background-color: #0a1b50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-}
-
-.cta:hover {
-    background-color: #37b8f5;
-}
-
+    @media screen and (max-width: 480px) {
+      .form-group input,
+      .form-group select {
+        width: 92%;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      h2{
+        width: 95%;
+      }
+    }
 </style>
 <body>
     
-  <div class="section" id="contato">
-    <h2>Simulador de Energia Solar</h2>
+<div class="section" id="contato">
+    <h2>Simule já sua economia!<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+    </svg></h2>
     <p>Preencha os dados para simular sua economia:</p>
-    <p>Ah, você consegue ver seu consumo(kWh) em sua conta de luz, ela estara proximo do valor total.<span style='font-size:16px;'>&#129321;</span></p>
+    <p>Caso não saiba seu consumo, você tem a opção de contato direto via WhatsApp para sanar todas suas dúvidas!<a href="https://wa.me/55199887766" target="_blank" svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20"
+      fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+      <path
+        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+      </svg>
+    </a>
+   </p>
     
     <form id="simuladorForm">
-       
         <div class="form-group">
             <label for="nome">Nome*:</label>
             <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
@@ -90,7 +134,6 @@
             <input type="email" id="email" name="email" required placeholder="seu@email.com">
         </div>
         
-        
         <div class="calculator-section">
             <h3>📊 Dados de Consumo</h3>
             
@@ -99,14 +142,14 @@
                 <select id="estado" name="estado" required>
                     <option value="">Selecione...</option>
                     <option value="RS">Rio Grande do Sul</option>
-                    <option value="SP">São Paulo</option>
-                    
+                    <option value="SC">Santa Catarina</option>
+                    <option value="PR">Paraná</option>
                 </select>
             </div>
             
             <div class="form-group">
                 <label for="cidade">Cidade*:</label>
-                <input type="text" id="cidade" name="cidade" required placeholder="Sua cidade">
+                <input type="text" id="cidade" name="cidade" required placeholder="Sua cidade-RS">
             </div>
             
             <div class="form-group consumo-wrapper">
@@ -115,74 +158,80 @@
             </div>
         </div>
         
-
-        <div id="resultado-calculadora" style="display:none; margin-top:20px; padding:15px; background:#f0f8ff; border-radius:8px;"></div>
+        <h4>Voltar á <a href="index.htm">Página inicial</a></h4>
+        
+        <div id="resultado-calculadora">
+            <!-- Resultados  aqui graças aoo JavaScript -->
+        </div>
         
         <button type="button" class="cta" onclick="calcularEEnviar()">Calcular Economia</button>
-      </form>
-    </div>
+    </form>
+</div>
 
-    <script>
-        function calcularEEnviar() {
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const estado = document.getElementById('estado').value;
-            const cidade = document.getElementById('cidade').value;
-            const consumo = parseFloat(document.getElementById('consumo').value);
-        
-            if (!nome || !email || !estado || !cidade || !consumo || isNaN(consumo)) {
-                alert("Por favor, preencha todos os campos corretamente!");
-                return;
-            }
-        
-            const potenciaSistema = (consumo * 1.2).toFixed(2); 
-            const economiaMensal = (consumo * 0.8).toFixed(2); 
-            const economiaAnual = (economiaMensal * 12).toFixed(2);
-        
-            const resultadoDiv = document.getElementById('resultado-calculadora');
-            resultadoDiv.style.display = 'block';
-            resultadoDiv.innerHTML = `
-                <h4 style="color:#0a1b50; margin-bottom:10px;">📈 Resultado da Simulação</h4>
-                <p><strong>Potência do Sistema:</strong> ${potenciaSistema} kWp</p>
-                <p><strong>Economia Mensal:</strong> R$ ${economiaMensal}</p>
-                <p><strong>Economia Anual:</strong> R$ ${economiaAnual}</p>
-                <p style="margin-top:10px; font-size:0.9em;">*Valores estimados</p>
-            `;
-        
-            resultadoDiv.scrollIntoView({ behavior: 'smooth' });
-        
-         
-  const templateParams = {
-    nome: nome,
-    email: email,
-    estado: estado,
-    cidade: cidade,
-    consumo: consumo,
-    potenciaSistema: potenciaSistema,
-    economiaMensal: economiaMensal,
-    economiaAnual: economiaAnual
-  };
-
-  emailjs.send(
-    'service_pupr11l', 
-    'template_qh8i44k', 
-    templateParams
-  ).then(
-    (response) => {
-      console.log('E-mail enviado!', response.status, response.text);
-      alert('Simulação enviada com sucesso! Entraremos em contato em breve.');
-    },
-    (error) => {
-      console.error('Falha no envio:', error);
-      alert('Ocorreu um erro. Tente novamente mais tarde.');
-    }
-  );
-}
-
-
-        </script>
-
-
+<script>
+    function calcularEEnviar() {
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const estado = document.getElementById('estado').value;
+        const cidade = document.getElementById('cidade').value;
+        const consumo = parseFloat(document.getElementById('consumo').value);
     
+        if (!nome || !email || !estado || !cidade || !consumo || isNaN(consumo)) {
+            alert("Por favor, preencha todos os campos corretamente!");
+            return;
+        }
+    
+        const producaoPorPainel = 55; // kWh por painel
+        const areaPorPainel = 2.7; // m² por painel
+        
+        const quantidadePaineis = Math.ceil(consumo / producaoPorPainel);
+        const areaTotal = (quantidadePaineis * areaPorPainel).toFixed(1);
+        const economiaMensal = (consumo * 0.8).toFixed(2); 
+        const economiaAnual = (economiaMensal * 12).toFixed(2);
+    
+        const resultadoDiv = document.getElementById('resultado-calculadora');
+        resultadoDiv.style.display = 'block';
+        resultadoDiv.innerHTML = `
+            <h4 style="color:#0a1b50; margin-bottom:10px;">📈 Resultado da Simulação</h4>
+            <p style="color:#0a1b50;"><strong>Área Necessária:</strong> ${areaTotal} m²</p>
+            <p style="color:#0a1b50;"><strong>Economia Mensal:</strong> R$ ${economiaMensal}</p>
+            <p style="color:#0a1b50;"><strong>Economia Anual:</strong> R$ ${economiaAnual}</p>
+            <p style="color:#0a1b50; style="margin-top:10px; font-size:0.em;">
+                *Valores estimados considerando instalação no telhado
+                e levando em consideração a média de valor tarifário nacional.<br>
+            </p>
+        `;
+    
+        resultadoDiv.scrollIntoView({ behavior: 'smooth' });
+    
+        const templateParams = {
+            nome: nome,
+            email: email,
+            estado: estado,
+            cidade: cidade,
+            consumo: consumo,
+            quantidadePaineis: quantidadePaineis,
+            areaTotal: areaTotal,
+            economiaMensal: economiaMensal,
+            economiaAnual: economiaAnual
+        };
+
+        emailjs.send(
+            'service_pupr11l', 
+            'template_qh8i44k', 
+            templateParams
+        ).then(
+            (response) => {
+                console.log('E-mail enviado!', response.status, response.text);
+                alert('Simulação enviada com sucesso! Entraremos em contato em breve.');
+            },
+            (error) => {
+                console.error('Falha no envio:', error);
+                alert('Ocorreu um erro. Tente novamente mais tarde.');
+            }
+        );
+    }
+</script>
+
 </body>
 </html>

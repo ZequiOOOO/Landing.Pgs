@@ -91,29 +91,26 @@ a:hover {
     color: white;
 
 }
-
 .carousel  p{
     max-height: 900px;
     overflow: hidden;
     margin-top: 84px;
     padding-left: 20px;
     border: 3px solid rgb(42, 14, 201);
-   
     border-radius: 10px;
     background-color: rgb(42, 14, 201);
     color: white;
     font-size: 25px;
     font-family: 'open_sansligh';
-
+    text-transform: uppercase;
 }
-
 .carousel-item img {
+    margin-top: 80px;
     width: 100%;
-    height: 500px; 
+    height: 500px; /* Altura fixa para o carrossel */
     object-fit: cover;
     color: #64acd2;
 }
-
 .beneficios {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -177,71 +174,55 @@ img, svg{
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 250px;
-}
-
+ }
 .sectionEpm:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
+ }
 .sectionEpm h2 {
     font-size: 1.5em;
     color: #0a1b50;
     margin-bottom: 10px;
-}
-
+ }
 .sectionEpm p {
     font-size: 1em;
     color: #555;
-    line-height: 1.4;
-}
-
+    line-height: 1.4; 
+ }
 h2 {
     line-height: 20px;
     font-size: 56px;
     font-family: 'open_sansligh';
-}
-
+ }
 h3 {
     font-size: 56px;
     z-index: -1;
     font-family: 'open_sansligh';
-}    
-
+ }    
 .section li {
     font-size: 1.5rem;
     font-family: 'Arial', sans-serif;
     color:#0a1b50;
     list-style-type: none;
-}    
-
+ }    
 .borda-perguntas {
     flex: 1;
     background: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 10px;
     color: #0a1b50;
-}
-
+ }
 .imagem-grande {
     width: 50%;
     max-width: 600px;
-}
-
+ }
 .imagem-grande img {
-    width: 815%;
+    width: 110%;
+    margin-top: -168%;
     height: auto;
-    animation: swing 3s ease-in-out infinite;
     transform-origin: top center;
-}
-
-@keyframes swing {
-    0%, 100% { transform: rotate(-5deg); }
-    50% { transform: rotate(5deg); }
-}
-
-
-
+    opacity: 0.5;
+ }
 .borda-perguntas {
     display: flex;
     margin: 5px 0;
@@ -252,11 +233,8 @@ h3 {
     margin: 20px auto;
     align-items: stretch;
     flex-wrap: nowrap;
-    border: 5px solid rgb(42, 14, 201);
     border-radius: 45px;
-    background-color: rgb(13 69 237 / 32%);
-}    
-
+ }    
 .titulo-pergunta {
     padding: 20px;
     max-width: 800px;
@@ -269,20 +247,17 @@ h3 {
     color: black;
     font-family: sans-serif;
     font-size: xx-large;
-    font-family: fantasy;
     animation: float 3s ease-in-out infinite;
-}
-
+ }
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
 
-}    
-
+ }    
 #duvidas.list-perguntas {
     background: rgba(230, 221, 221, 0.5);
     padding: 20px;
-    max-width: 800px;
+     max-width: 800px;
     margin: 20px auto;
     border-radius: 10px;
     align-items: center;
@@ -290,14 +265,12 @@ h3 {
     flex-wrap: wrap;
     justify-content: space-around;
     display: flex;
-}    
-
+ }     
 .list-perguntas h3 {
     font-size: 29px;
     z-index: -1;
     font-family: 'poppinsmedium';
-}    
-
+ }    
 .saiba-mais {
     background-color:#0a1b50;
     padding: 10px 15px;
@@ -305,12 +278,10 @@ h3 {
     color: white;
     text-decoration: none;
     transition: background 0.9s;
-}    
-
+ }    
 .saiba-mais:hover {
     background-color: #e68a00;
-}    
-
+ }    
 .section {
     background: rgba(255, 255, 255, 0.5);
     padding: 20px;
@@ -318,8 +289,7 @@ h3 {
     margin: 20px auto;
     border-radius: 10px;
     animation: fadeIn 1s forwards;
-}    
-
+ }
 .img-projetos {
     margin-top: 0px;
     flex-direction: row-reverse;
@@ -327,8 +297,7 @@ h3 {
     text-align: center;
     font-weight: 500;
     font-size: 2rem;
-}    
-
+ }    
 .image-projetos {
     display: flex;
         flex-wrap: wrap;
@@ -336,8 +305,7 @@ h3 {
         justify-content: center;
         padding: 30px;
         margin: 65px;
-}        
-
+ }        
 .small-img {
     width: 150px;
     height: auto;
@@ -345,13 +313,11 @@ h3 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}    
-
+ }    
 .small-img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}    
-
+ }    
 .expanded {
     position: fixed;
     top: 50%;
@@ -362,41 +328,29 @@ h3 {
     max-height: 90%;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}    
-
+ }    
 .gallery img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
     border-radius: 5px;
     transition: transform 0.3s;
-}    
-
+ }    
 .gallery img:hover {
     transform: scale(1.05);
-}    
-
+ }    
 .container-com-imagem {
     display: flex;
     gap: 20px;
     align-items: flex-start;
     margin: 20px 0;
-}    
+ }    
 .promo {
     background-color:#0a1b501a;
     padding: 20px;
     text-align: center;
     margin: 20px 0;
     color: black;
-}
-
-.icones {
-    display: flex ;
-        width: 115%;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
-        padding-left: 958px;
 }
 
 footer  {
@@ -426,13 +380,10 @@ footer a:hover {
     margin: -10px;
 }
 
-.footer2 {display: flex
-    ;
-        width: 109%;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        padding-left: 70px;
-        justify-content: flex-start;
+.footer2 {
+        display: flex;
+        flex-direction: row;
+        gap: 90px;
     
 }
 
@@ -458,11 +409,10 @@ footer a:hover {
     border-radius: 25px;*/
   
 }
-.imagem-empresa video{
+.imagem-empresa img{
     width: 505px;
-    margin-top: 236px;
-    /* margin-top: 70px; */
-    padding: 70px;
+    margin-top: 265px;
+    padding: 50px;
 
 }
 
@@ -515,56 +465,15 @@ footer a:hover {
     border-radius: 0;
   }
   
+  .galeria-projetos img{
+    width: 110%;
+    margin: 0px -5%;
 
-.titulo-entregas{
-    color: black;
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    border-radius: 10px;
-    animation: fadeIn 1s forwards;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    display: flex;
-    color: black;
-    font-family: sans-serif;
-    font-size: xx-large;
-    font-family: 'fantasy' "Copperplate";
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-
-}
-
-
-  .galeria-projetos {
-    width: 96%;
-    border: 9px solid;
-    border-color: rgb(112, 112, 110);
-    background-color: rgb(58, 58, 57);
-    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(61, 152, 226), rgb(0 255 72));
-
-    border-radius: 15px;
-    margin-bottom: 10px;
-    column-count: 4;
-    column-gap: 13px;
-  }
-  
-  
-  
-
-
-
-
-
-
-/* tentando fazer os Media Queries para celular */
-/* Media Queries para Responsividade */
+ }
+ 
+ /* tentando fazer os Media Queries para Responsiva*/
+/* Ajustes para telas grandes */
 @media screen and (max-width: 1200px) {
-    /* Ajustes para tablets grandes */
     .container-fluid.items {
         flex-wrap: wrap;
         padding: 40px;
@@ -582,7 +491,7 @@ footer a:hover {
         margin: -40px 0 0 0;
     }
     
-    .imagem-empresa video {
+    .imagem-empresa img {
         width: 100%;
         margin-top: 20px;
         padding: 0;
@@ -594,24 +503,18 @@ footer a:hover {
     }
 }
 
+/* Aqui funciona tablets e cell grandes */
 @media screen and (max-width: 768px) {
-    /* Ajustes para tablets e celulares grandes */
     body {
         padding: 15px;
     }
-    
- 
     .header{
        width: 100px;
     }    
-    
-    
-   
     .logo img {
         width: 150px;
         height: 150px;
     }
-    
     nav {
         display: flex;
         flex-wrap: wrap;
@@ -619,7 +522,6 @@ footer a:hover {
         margin-top: 25px;
         align-content: stretch;
     }
-    
     nav a {
         margin: 5px;
         font-size: 0.9em;
@@ -627,135 +529,132 @@ footer a:hover {
     .bi.bi-facebook, .bi.bi-whatsapp, .bi.bi-instagram{
         display: none;
     }
-    
     .carousel-item img {
         height: 300px;
         margin-top: 125px;
     }
-    
     .carousel p {
         font-size: 18px;
         margin-top: 60px;
     }
+    .sobre-nos {
+        padding: 20px 10px;
+    }
     
+    .imagem-empresa img{
+        padding-left: 10%;
+        width: 50%;
+    }
     .container-fluid.items {
         padding: 20px;
         margin: 20px 0;
     }
-    
     .sectionEpm {
         flex: 1 1 100%;
     }
-    
     .borda-perguntas {
         flex-direction: column;
         padding: 15px;
         margin: 15px auto;
     }
-    
-    
-    .imagem-grande img  {
-            width: 85%;
-            animation: float 3s ease-in-out infinite;
-        }
-    
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        
+    .imagem-grande{
+        width: 85%;
+        margin-top: -168%;   
+        opacity: 0.5; 
+        height: auto;
     }
-    
-    .galeria-projetos {
-        column-count: 2;
+    .imagem-grande img {
+        width: 85%;
+        margin-top: -168%;   
+        opacity: 0.5; 
+        height: auto;
+        transform-origin: top center;
+        width: 85%; display: none;
+        animation: float 3s ease-in-out infinite; display: none;
     }
-    
+    .banner img{
+        width: 110%;
+        height: 110%;
+        margin-top: 31%;
+    }
+    .galeria-projetos img {
+        width: 220%;
+    }
     .footer-dark {
         flex-direction: column;
         padding: 30px 15px;
     }
-    
     .footer2 {
-        width: 100%;
-        padding-left: 0;
-        flex-direction: column;
-    }
-    
-    .icones {
+      width: 100%;
+       padding: 5px 0%;
+      flex-direction: column;
+   }
+   .icones {
         padding-left: 0;
         justify-content: center;
         width: 100%;
         margin-top: 20px;
     }
-    
     .WhatsApp {
         right: 15px;
         bottom: 15px;
-    }
-    
+    }   
     .WhatsApp img {
         width: 50px;
     }
 }
 
+/* Aqui funciona na cell pequenos*/
 @media screen and (max-width: 480px) {
-    /* Ajustes para celulares pequenos */
     .carousel-item img {
         height: 200px;
     }
-    
+    .banner img{
+        width: 110%;
+        height: 110%;
+        margin-top: 31%;
+    }
     .carousel p {
         font-size: 16px;
         padding: 10px;
+            border: 3px solid rgb(42, 14, 201);
+            border-radius: 10px;
+            background-color: rgb(42, 14, 201);
+            color: white;
+           font-family: 'open_sansligh';
+            text-transform: uppercase;    
     }
-    
-    .titulo-pergunta,
-    .titulo-entregas {
+    .titulo-pergunta {
         font-size: 1.5rem;
         padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
     }
-    
     .list-perguntas h3 {
         font-size: 1.2rem;
     }
-    
     .galeria-projetos {
         column-count: 2;
-    }
-    
+    } 
     .promo h2 {
         font-size: 1.5rem;
     }
-    
     .promo p {
         font-size: 1rem;
     }
-    
     .saiba-mais {
         padding: 8px 12px;
         font-size: 0.9rem;
     }
-    
     .sobre-nos h5 {
         font-size: 1.8rem;
         margin-top: 10px;
     }
-    
     .sobre-nos p {
         font-size: 1rem;
     }
 }
 
-/* Melhorias específicas para orientação retrato */
-@media screen and (max-width: 768px) and (orientation: portrait) {
-    .sobre-nos {
-        padding: 20px 10px;
-    }
-    
-    .imagem-empresa video {
-        margin-top: 20px;
-        width: 240px;
-    }
-}
+
 
 /* Melhorias específicas para orientação paisagem */
 @media screen and (max-width: 768px) and (orientation: landscape) {
