@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Ser Elétrica - Projetos de energia solar residencial e industrial. Orçamento personalizado!">
+     <!-- acesso a outra pagina de consumo... -->
     <link rel="stylesheet" href="soma.html">
+    <!-- frameworks de estilos...-->
      <link rel="shortcut icon" href="icon.logo/Logo (Icon).ico" type="image/png">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" as="style">
 
 <title>Projetos Relizados</title>
 </head>
@@ -33,7 +37,11 @@
         align-items: center;
         margin-top: -160px;
     }
+    svg{
+        color: yellow;
+    }
     .bi-whatsapp{
+        margin: -5px;
       color: rgb(0, 255, 0);
     }
     .whatsapp{
@@ -43,24 +51,26 @@
         display: none;
     }
     .paragrafo-principal{
+        text-transform: uppercase;
+        text-align: center;
         font-size: larger;
     }
-    h1{ 
-        text-transform: uppercase;
-        font-family: system-ui;
-        font-weight: 500;
-        font-size: 15px;
-        text-align: center;
-        color: white;
-        margin-top: -8%;
+   article{
         padding-left: 65px;
         padding-right: 65px;
-    }
-    h1 p{
-        border: 2px;
-        border-radius: 15px;
-        background-color: whitesmoke;
+   }
+   article p{
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 15px;
+        background-color: #f2f2f2;
         color: black;
+        margin: 10px 0;
+    }
+    p:hover {
+    transform: translateY(-5px);
+    background-color: rgb(173, 173, 173);
+    box-shadow: 0 10px 20px rgba(216, 21, 21, 0.2);
     }
     h2{
         text-transform: uppercase;
@@ -116,22 +126,25 @@
         width: 400px;
         height: 440px;
     }
+    .bi-whatsapp{
+        margin: -3px;
+    }
     main{
         display: flex;
         margin-top: 0px;
         flex-direction: column;
         align-items: center;
-        margin-top: -160px;
+        margin-top: 0;      
     }
-    h1{
-        text-transform: uppercase;
-        font-size: 6px;
+    article{
+        text-transform: unset;
+        font-size: 14px;
         padding-left: 15px;
         padding-right: 15px;
-        margin-top: -110px;
+    }
+    article p{
         text-align: center;
-        color: black;}
-    h1 p{
+        text-transform: uppercase;;
         border: 2px;
         border-radius: 15px;
         background-color: whitesmoke;
@@ -174,26 +187,29 @@
         bottom: 15%;
         right:  5%;
     }
-    .carousel{ /*envolta da imagem*/
+     /*envolta da imagem*/
+    .carousel{
         gap: 10px; 
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
-    .segunda-coluna{ /*envolta da imagem*/
+    /*envolta da imagem*/
+    .segunda-coluna{ 
         gap: 10px;
         margin-top: 3%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
-
-    .carousel img{ /*eu mexo na imagem*/
+    /*direto na imagem*/
+    .carousel img{ 
         display: flex;
         flex-direction: row;
         width: 215px;
         height: 215px;
     }
-    .segunda-coluna img{ /*eu mexo na imagem*/
+    /*direto na imagem*/
+    .segunda-coluna img{ 
         display: flex;
         flex-direction: row;
         width: 215px;
@@ -207,74 +223,81 @@
     <header class="logo-eletric">
         <img src="img1/sOLU (Your Story).png" alt="Logo-Ser-Eltrica">
     </header>
-    <h1>
-       <p class="paragrafo-principal">
-           Na Ser Elétrica – Soluções em Eletricidade, desenvolvemos projetos de energia solar com foco em eficiência, segurança e inovação. Contamos com uma equipe de engenheiros especializados e utilizamos softwares de ponta para garantir soluções personalizadas e de alto desempenho para cada cliente. Confira como funciona nosso processo:
-      </p> 
-      <p>
-           1. Análise e Diagnóstico Inicial
-            Realizamos uma visita técnica e análise detalhada do perfil de consumo, características do local e viabilidade da instalação. Esses dados são fundamentais para um projeto eficiente e sob medida.
-      </p>
-      <p>
-           2. Simulação e Dimensionamento
-           Com o apoio de softwares avançados como PV*Sol, Helioscope e AutoCAD, simulamos o desempenho do sistema fotovoltaico ao longo do ano, considerando sombreamento, orientação solar e características técnicas dos equipamentos. Assim, garantimos o melhor dimensionamento possível para cada necessidade.
-      </p>
-      <p>
-           3. Projeto Técnico e Engenharia Especializada
-           Nossa equipe de engenharia elabora o projeto executivo completo, com diagramas elétricos, estudos estruturais e especificações técnicas, seguindo rigorosamente as normas brasileiras (como NBR 16690 e NR-10). Todo o processo é conduzido com responsabilidade técnica e atenção aos detalhes.
-        
-        </p>
+    <article>
+        <p class="paragrafo-principal">
+            Na Ser Elétrica, desenvolvemos projetos de energia solar com foco em eficiência, segurança e inovação. Com uma equipe de especialistas e tecnologia de ponta, entregamos soluções sob medida para cada cliente. <br>Conheça nosso processo e transforme sua energia em economia e sustentabilidade.    </article>  
+    <article>
         <p>
-           4. Legalização e Conexão com a Concessionária
-           Cuidamos de toda a parte burocrática, desde a solicitação de acesso até a aprovação do projeto junto à concessionária de energia, garantindo rapidez, conformidade e segurança jurídica para nossos clientes.
-        </p>
+        1. Análise e Diagnóstico Inicial:
+           Fazemos uma visita técnica e analisamos o consumo e as condições do local para criar um projeto sob medida.   </p>  
+    </article> 
+    <article>
         <p>
-           5. Instalação Profissional e Comissionamento
-           Nossa equipe técnica executa a instalação com total qualidade, segurança e respeito ao cronograma. Após a montagem, realizamos testes completos de funcionamento e comissionamento do sistema.
-        </p>
+        2. Simulação e Dimensionamento:
+           Utilizamos softwares avançados para simular o desempenho do sistema e garantir o melhor dimensionamento.  </p>
+    </article>     
+    <article> 
         <p>
-           6. Monitoramento e Suporte Contínuo
-           Oferecemos soluções de monitoramento em tempo real, permitindo que o cliente acompanhe a geração de energia de forma simples e prática. Também garantimos suporte técnico pós-venda e manutenção preventiva, se necessário.
+        3. Projeto Técnico e Engenharia Especializada:
+        Elaboramos o projeto executivo completo com base em normas técnicas, assegurando segurança e qualidade.    </p>
+    </article>
+    <article>
+        <p>
+        4.  Legalização e Conexão com a Concessionária:
+        Cuidamos de toda a burocracia com a concessionária para uma conexão segura e em conformidade.
         </p>
-    </h1>
+    </article>
+    <article>
+     <p>5.  Instalação Profissional e Comissionamento:
+        Executamos a instalação com excelência e testamos todo o sistema para garantir seu pleno funcionamento.
+    </p>
+    </article>
+    <article>
+     <p>6. Monitoramento e Suporte Contínuo:
+        Oferecemos monitoramento em tempo real e suporte técnico para manter o sistema sempre eficiente.
+     </p>
+    </article>
+
     <main>
-          <h2>Conheça nossos serviços em ação:<br> projetos já realizados!</h2>  
+          <h2>Conheça alguns de nossos serviços em ação:<br> projetos já realizados!</h2>  
     </main>
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <img src="img/dimens WhatsApp de 2025-04-06 à(s) 23.00.22_92be2db0.png" width="500" height="500" alt="Projeto Residencial">
-        <img src="img/IMG-20250406-WA0174.jpg" width="500" height="500"  alt="Projeto Industrial">
-        <img src="img/IMG-20250406-WA0175.jpg" width="500" height="500" alt="Projeto Agrícola">
+        <img src="img/dimens WhatsApp de 2025-04-06 à(s) 23.00.22_92be2db0.png" width="500" height="500" alt="Instalação de painel solar em telhado industrial – projeto Ser Elétrica">
+        <img src="img/IMG-20250406-WA0177.jpg" width="500" height="500" alt="Instalação de painel solar em telhado agricula – projeto Ser Elétrica">
+        <img src="img/IMG-20250406-WA0175.jpg" width="500" height="500" alt="Instalação de painel solar em telhado residencial – projeto Ser Elétrica">
     </div>
     <div class="segunda-coluna">
-        <img src="img/IMG-20250406-WA0176.jpg"  width="500" height="500" alt="Projeto Agrícola">
-        <img src="img/IMG-20250406-WA0177.jpg" width="500" height="500" alt="Projeto Agrícola">
-        <img src="img/IMG-20250406-WA0178.jpg" width="500" height="500" alt="Projeto Agrícola">
-        <img src="img/IMG-20250406-WA0179.jpg" width="500" height="500" alt="Projeto Agrícola"> 
+        <img src="img/IMG-20250406-WA0176.jpg" width="500" height="500" alt="Instalação de painel solar em telhado residencial – projeto Ser Elétrica">
+        <img src="img/IMG-20250406-WA0178.jpg" width="500" height="500" alt="Instalação de painel solar em telhado residencial – projeto Ser Elétrica">
+        <img src="img/IMG-20250406-WA0179.jpg" width="500" height="500" alt="Instalação de painel solar em telhado residencial – projeto Ser Elétrica"> 
     </div>
     <h3>
-        <a href="https://wa.me/55199887766"> Quero meu orçamento personalizado!</a><a svg xmlns="http://www.w3.org/2000/svg" width="96" height="96"
-         fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+        <a href="https://wa.me/55199887766"> Quero meu orçamento personalizado!
+         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+          aria-label="WhatsApp"  fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
          <path
-           d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-         </svg>
-       </a>
-     </h3>
-     
-    <h4>Desde 2024, ajudamos clientes e amigos a produzirem uma energia limpa e de qualidade!<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
-     fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
-       <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
-     </svg></h4>
+         d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+       </svg> 
+      </a>     
+    </h3> 
+    <h4>Desde 2024, ajudamos clientes e amigos a produzirem uma energia limpa e de qualidade!
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
+         aria-label="Ícone de sol"  fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+         <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+        </svg>
+    </h4>
 
      <div class="whatsapp">
         <a href="http://wa.me/5551995695969" target="_blank">
         <img src="btnWhatsApp/WhatsApp.background__92176.png " width="55" alt="Fale Conosco pelo WhatsApp"
-         title="Fale Conosco pelo WhatsApp"/>
+         title="Fale Conosco pelo WhatsApp">
+        </a>
      </div>
 
      <div class="calculadora">
         <a href="soma.html" target="_blank">
             <img src="btnSoma/image-490208170_18110891566478491_6576777562743563573_n.png" width="30" alt="simulação" 
-            title="seu consumo"/>
+            title="Seu consumo">
      </div>
     </body>
 </html>

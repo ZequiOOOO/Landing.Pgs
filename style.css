@@ -1,14 +1,4 @@
 body {
- /* height: 100vh;  Ajusta a altura do corpo para ocupar 100% da altura da janela 
-    background-image: url('C:/Users/ezequiel/Downloads/Captura de SER-ELETRICA 2024-09-18 160404.png');
-    background-image: url(https://solarprime.com.br/wp-content/uploads/2023/02/post_thumbnail-3820c4e80fe1cdef94185cecf2a35806.jpeg);
-    background-size: cover; /* Faz a imagem cobrir todo o fundo 
-    background-position: center;  Centraliza a imagem*/ 
-   /*background-color: rgb(197, 85, 19);*/
-   /*background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));    color: #fff;*/
-   /*background-image: linear-gradient(to right, rgb(40 8 255 / 73%), rgb(0 255 72));*/
-   /*linear-gradient(to right, rgb(36, 13, 49), rgb(0 159 255));*/
-  /* background-image: linear-gradient(to right, rgb(255 8 8 / 73%), rgb(0 159 255));*/ 
     font-family: sans-serif;
     width: 100%;
     min-height: 100vh;
@@ -19,11 +9,9 @@ body {
     justify-content: center;
     text-align: center;
     color: white;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     overflow-y: auto;
 }
-
-
 
 header {
     display: flex;
@@ -43,30 +31,25 @@ header.scrolled {
     background-color: rgba(10, 27, 80, 0.9);
 }
 
-    nav a{
-        color: #37b8f5;
-        text-decoration: none;
-        margin: 0 15px;
-        font-size: 1.1em;
-        transition: color 0.3s ease;
-       
-    }
-b{
+nav a {
+    color: #37b8f5;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+b {
     font-size: 24px;
     color: #64acd2;
-
 }
-b{
+
+b {
     border: 2px solid rgb(77, 27, 105);
-   
     border-radius: 10px;
     background-color: rgb(77, 33, 102);
     color: white;
 }
-
-       
-
-
 
 .logo img {
     width: 300px;
@@ -83,15 +66,14 @@ a {
     color: #64acd2;
 }
 
-
 a:hover {
     border: 2px solid rgb(77, 27, 105);
     border-radius: 10px;
     background-color: rgb(77, 33, 102);
     color: white;
-
 }
-.carousel  p{
+
+.carousel p {
     max-height: 900px;
     overflow: hidden;
     margin-top: 84px;
@@ -104,69 +86,41 @@ a:hover {
     font-family: 'open_sansligh';
     text-transform: uppercase;
 }
+
+/*slide IMG*/
 .carousel-item img {
     margin-top: 80px;
     width: 100%;
-    height: 500px; /* Altura fixa para o carrossel */
+    height: 500px;
+/* Altura fixa para o carrossel */
     object-fit: cover;
     color: #64acd2;
 }
-.beneficios {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    z-index: 1;
+
+img,
+svg {
+    color: black;
 }
 
-.beneficios h3 {
-    font-size: 2em;
-    color:#0a1b50;
-    margin-bottom: 20px;
+.titulo-destacado {
+    padding-top: 10%;
+    color: #37b8f5;
+    text-transform: uppercase;
+    font-size: 41px;
 }
 
-.beneficios p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #0a1b50;
-    margin: 10px 0;
-}
-/*
-.imagem-destaque {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-    width: 588px;
-    height: auto;
-}
-
-.imagem-destaque img {
-    width: 100%;
-    height: 80%;
-    opacity: 1.9;
-    margin: -103px;
-    padding-left: 240px;
-}
-*/
-img, svg{
-    color:black;
-}
-.container-fluid.items {
+.beneficios-solar {
     background-color: white;
-    padding: 99px;
+    padding: 20px;
     display: flex;
-   
-    justify-content: space-between;
-    gap: 20px;
-    
+    justify-content: center;
+    gap: 6px;
     margin: 70px;
     box-sizing: content-box;
     justify-self: center;
 }
 
-
-.sectionEpm {
+.beneficios-energia {
     background: #f9f9f9;
     padding: 20px;
     flex: 1 1 calc(25% - 20px);
@@ -174,56 +128,47 @@ img, svg{
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 250px;
- }
-.sectionEpm:hover {
+}
+
+.beneficios-energia:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
- }
-.sectionEpm h2 {
+}
+
+.beneficios-energia h3 {
     font-size: 1.5em;
     color: #0a1b50;
     margin-bottom: 10px;
- }
-.sectionEpm p {
+}
+
+.beneficios-energia p {
     font-size: 1em;
     color: #555;
-    line-height: 1.4; 
- }
-h2 {
+    line-height: 1.4;
+}
+
+h3 {
     line-height: 20px;
     font-size: 56px;
     font-family: 'open_sansligh';
- }
-h3 {
-    font-size: 56px;
-    z-index: -1;
-    font-family: 'open_sansligh';
- }    
+}
+
 .section li {
     font-size: 1.5rem;
     font-family: 'Arial', sans-serif;
-    color:#0a1b50;
+    color: #0a1b50;
     list-style-type: none;
- }    
-.borda-perguntas {
+}
+
+.borda-em-perguntas {
     flex: 1;
     background: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 10px;
-    color: #0a1b50;
- }
-.imagem-grande {
-    width: 50%;
-    max-width: 600px;
- }
-.imagem-grande img {
-    width: 110%;
-    margin-top: -168%;
-    height: auto;
-    transform-origin: top center;
-    opacity: 0.5;
- }
-.borda-perguntas {
+    color: #000000;
+}
+
+.borda-em-perguntas {
     display: flex;
     margin: 5px 0;
     text-align: center;
@@ -234,30 +179,13 @@ h3 {
     align-items: stretch;
     flex-wrap: nowrap;
     border-radius: 45px;
- }    
-.titulo-pergunta {
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    border-radius: 10px;
-    animation: fadeIn 1s forwards;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    display: flex;
-    color: black;
-    font-family: sans-serif;
-    font-size: xx-large;
-    animation: float 3s ease-in-out infinite;
- }
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+}
 
- }    
-#duvidas.list-perguntas {
+#duvidas.lista-perguntas {
+    position: relative;
     background: rgba(230, 221, 221, 0.5);
     padding: 20px;
-     max-width: 800px;
+    max-width: 800px;
     margin: 20px auto;
     border-radius: 10px;
     align-items: center;
@@ -265,23 +193,101 @@ h3 {
     flex-wrap: wrap;
     justify-content: space-around;
     display: flex;
- }     
-.list-perguntas h3 {
-    font-size: 29px;
-    z-index: -1;
-    font-family: 'poppinsmedium';
- }    
+    z-index: 1;
+    overflow: hidden;
+    
+}
+
+/*Imagem no fundoo*/
+#duvidas.lista-perguntas::before {
+    content: '';
+    position: absolute;
+    top: -18%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: url('img1/1-image-photography-with-natural__77286.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+/*Conteúdo visível por cima da imagem de fundo */
+#duvidas.lista-perguntas * {
+    position: relative;
+    z-index: 2;
+}
+
+.perguntasE-imagem {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: midnightblue;
+    font-family: system-ui;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.pessoas-pensando {
+    left: 5%;
+    margin-top: 20px;
+}
+
+.pessoas-pensando img {
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+    left: -60%;
+}
+
+.perguntas-frequentes {
+    margin-top: 3%;
+    font-size: 31px;
+    font-weight: bold;
+    color: #000000;
+    /* Cor principal */
+    text-shadow: 3px 3px 0 #fbfbfc,
+    /* Sombra azul mais escura */
+    6px 6px 0 rgba(0, 0, 0, 0.2);
+    /* Sombra preta suave */
+}
+
+h4 {
+    margin-top: -11px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    /* Cor principal */
+    text-shadow: 3px 3px 0 #fbfbfc,
+    /* Sombra azul mais escura */
+   6px 6px 0 rgba(0, 0, 0, 0.2);
+    /* Sombra preta suave */
+}
+
+h5 {
+    color: midnightblue;
+    font-size: 30px;
+    font-family: fantasy;
+}
+
 .saiba-mais {
-    background-color:#0a1b50;
+    background-color: #0a1b50;
     padding: 10px 15px;
     border-radius: 5px;
     color: white;
     text-decoration: none;
     transition: background 0.9s;
- }    
+}
+
 .saiba-mais:hover {
     background-color: #e68a00;
- }    
+}
+
 .section {
     background: rgba(255, 255, 255, 0.5);
     padding: 20px;
@@ -289,90 +295,42 @@ h3 {
     margin: 20px auto;
     border-radius: 10px;
     animation: fadeIn 1s forwards;
- }
-.img-projetos {
-    margin-top: 0px;
-    flex-direction: row-reverse;
-    display: flex;
-    text-align: center;
-    font-weight: 500;
-    font-size: 2rem;
- }    
-.image-projetos {
-    display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        padding: 30px;
-        margin: 65px;
- }        
-.small-img {
-    width: 150px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
- }    
-.small-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
- }    
-.expanded {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.5);
-    z-index: 1000;
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
- }    
-.gallery img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    transition: transform 0.3s;
- }    
-.gallery img:hover {
-    transform: scale(1.05);
- }    
-.container-com-imagem {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    margin: 20px 0;
- }    
+}
+
+
 .promo {
-    background-color:#0a1b501a;
+    background-color: #0a1b501a;
     padding: 20px;
     text-align: center;
     margin: 20px 0;
     color: black;
 }
 
-footer  {
+/*titulos footer*/
+.final-ajuda {
+    color: rgb(11, 0, 114);
+    font-size: 25px;
+    font-family: fantasy;
+}
+
+footer {
     flex-direction: column;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 20px;
 }
-/* Remove hover no footer */
-footer a:hover {
-    border: none !important;
-    background-color: transparent !important;
-    color: inherit !important;
-    border-radius: 0;
-  }
-  
+
+h6,
+a {
+    font-size: 20px !important;
+    font-family: serif !important;
+}
 
 .footer-dark {
     padding: 50px 0;
     color: #f0f9ff;
-    background-color:#353537;
+    background-color: #353537;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -381,10 +339,9 @@ footer a:hover {
 }
 
 .footer2 {
-        display: flex;
-        flex-direction: row;
-        gap: 90px;
-    
+    display: flex;
+    flex-direction: row;
+    gap: 160px;
 }
 
 .inicio {
@@ -403,266 +360,257 @@ footer a:hover {
     display: flex;
     gap: 36px;
     margin: -76px;
-    
-/*border: 2px solid rgb(8, 56, 129);
-    padding: 10px;
-    border-radius: 25px;*/
-  
 }
-.imagem-empresa img{
+
+.imagem-empresa img {
     width: 505px;
     margin-top: 265px;
     padding: 50px;
-
 }
 
-
-.sobre-nos h5{
-    margin-top: 300px;
+.sobre-nos h1 {
+    margin-top: 260px;
     color: #37b8f5;
     text-transform: uppercase;
     font-size: 41px;
-
 }
+
 .sobre-nos p {
     color: rgb(106 106 106);
     font-family: "Poppins", Sans-serif;
     font-size: 18px;
     letter-spacing: 1px;
-    
-
 }
 
-/*.sobre-nos:hover {
-    color: rgb(36, 13, 49);
-    transition: 0.3s all;
-    border: 2px solid rgb(8, 56, 129);
-    padding: 10px;
-    border-radius: 25px;
-    background-color: rgb(38, 107, 211);
-    color: rgb(12, 4, 4);
-    height: 400px;
-    }
-    #map {
-        width: 100%;
-}*/
-
-.WhatsApp{
-  position: fixed;
-  bottom: 26px;
-  right: 26px;
-  z-index: 9999; /*
-  border: 5px solid rgb(42, 14, 201);
-  border-radius: 45px;
-  background-color: rgb(13 69 237 / 32%);*/
+.WhatsApp {
+    position: fixed;
+    bottom: 26px;
+    right: 26px;
+    z-index: 9999;
 }
-
 
 .WhatsApp a:hover {
     border: none !important;
     background-color: transparent !important;
     color: inherit !important;
     border-radius: 0;
-  }
-  
-  .galeria-projetos img{
-    width: 110%;
-    margin: 0px -5%;
+}
 
- }
- 
- /* tentando fazer os Media Queries para Responsiva*/
-/* Ajustes para telas grandes */
-@media screen and (max-width: 1200px) {
-    .container-fluid.items {
+.sistemas-fotovoltaicos img {
+    width: 105%;
+    margin: 0px -5%;
+}
+/*  PARA MOBILE */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px !important;
+        box-sizing: border-box;
+    }
+    
+    * {
+        box-sizing: border-box;
+        max-width: 106%;
+    }
+    
+    /*  HEADER */
+    header {
+        height: 116px;
+        padding: 10px 5px;
         flex-wrap: wrap;
-        padding: 40px;
-        margin: 40px 0;
+        position: absolute;
+        width: 103%;
     }
     
-    .sectionEpm {
-        flex: 1 1 calc(50% - 20px);
-        margin-bottom: 20px;
+    .logo img {
+        width: 120px !important;
+        height: 120px !important;
     }
     
+    nav {
+        width: 100%;
+        order: 3;
+        margin-top: -115px;
+        padding-left: 56px;
+    }
+    
+    nav a {
+        font-size: 0.8em !important;
+        margin: 3px 5px !important;
+        padding: 5px 8px;
+        display: inline-block;
+    }
+    
+    .bi.bi-facebook,
+    .bi.bi-whatsapp,
+    .bi.bi-instagram {
+        display: none;
+    }
+    /*  CARROSSEL "SLIDES" */
+    .carousel {
+        margin-top: 60px;
+    }
+    
+    .carousel-item img {
+        height: 180px !important;
+        margin-top: 45px !important;
+        width: 100vw;
+        margin-left: -10px;
+    }
+    
+    .carousel p {
+            display: block;
+            font-size: 8px;
+            padding: 0px;
+            margin: -5px;
+        }
+        .carousel-caption {
+            display: block !important;
+        }
+    
+    /* SEÇÃO SOBRE NÓS  */
     .sobre-nos {
         flex-direction: column;
-        padding: 30px;
-        margin: -40px 0 0 0;
+        padding: 15px !important;
+        margin: 0 !important;
+        gap: 15px;
     }
     
     .imagem-empresa img {
-        width: 100%;
-        margin-top: 20px;
-        padding: 0;
+        width: 100% !important;
+        margin-top: 0 !important;
+        padding: 0 !important;
     }
     
-    .sobre-nos h5 {
-        margin-top: 20px;
-        font-size: 32px;
-    }
-}
-
-/* Aqui funciona tablets e cell grandes */
-@media screen and (max-width: 768px) {
-    body {
-        padding: 15px;
-    }
-    .header{
-       width: 100px;
-    }    
-    .logo img {
-        width: 150px;
-        height: 150px;
-    }
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin-top: 25px;
-        align-content: stretch;
-    }
-    nav a {
-        margin: 5px;
-        font-size: 0.9em;
-    }
-    .bi.bi-facebook, .bi.bi-whatsapp, .bi.bi-instagram{
-        display: none;
-    }
-    .carousel-item img {
-        height: 300px;
-        margin-top: 125px;
-    }
-    .carousel p {
-        font-size: 18px;
-        margin-top: 60px;
-    }
-    .sobre-nos {
-        padding: 20px 10px;
+    .sobre-nos h1 {
+        margin-top: 0 !important;
+        font-size: 24px !important;
     }
     
-    .imagem-empresa img{
-        padding-left: 10%;
-        width: 50%;
+    .sobre-nos p {
+        font-size: 14px !important;
+        line-height: 1.5;
     }
-    .container-fluid.items {
-        padding: 20px;
-        margin: 20px 0;
-    }
-    .sectionEpm {
-        flex: 1 1 100%;
-    }
-    .borda-perguntas {
+    
+    /*  BENEFÍCIOS  */
+    .beneficios-solar {
         flex-direction: column;
+        margin: 20px 0 !important;
+        padding: 10px !important;
+        gap: 15px;
+    }
+    
+    .beneficios-energia {
+        width: 100%;
+        margin-bottom: 0;
+        min-width: auto;
         padding: 15px;
-        margin: 15px auto;
     }
-    .imagem-grande{
-        width: 85%;
-        margin-top: -168%;   
-        opacity: 0.5; 
-        height: auto;
+    
+    .beneficios-energia h3 {
+        font-size: 1.2em !important;
     }
-    .imagem-grande img {
-        width: 85%;
-        margin-top: -168%;   
-        opacity: 0.5; 
-        height: auto;
-        transform-origin: top center;
-        width: 85%; display: none;
-        animation: float 3s ease-in-out infinite; display: none;
+    
+    /*  PERGUNTAS   */
+    .borda-em-perguntas {
+        width: 95% !important;
+        padding: 15px !important;
+        margin: 15px auto !important;
+        border-radius: 20px !important;
     }
-    .banner img{
-        width: 110%;
-        height: 110%;
-        margin-top: 31%;
+    
+    .perguntas-frequentes {
+        font-size: 20px !important;
     }
-    .galeria-projetos img {
-        width: 220%;
+    
+    h4 {
+        font-size: 18px !important;
+        margin-top: 5px !important;
     }
+    
+    .pessoas-pensando img {
+        width: 80px !important;
+        left: 0 !important;
+        margin-right: 10px;
+    }
+    
+    /*  FOOTER */
     .footer-dark {
-        flex-direction: column;
-        padding: 30px 15px;
-    }
-    .footer2 {
-      width: 100%;
-       padding: 5px 0%;
-      flex-direction: column;
-   }
-   .icones {
-        padding-left: 0;
-        justify-content: center;
         width: 100%;
-        margin-top: 20px;
+        text-align: center;
+        padding: 45px 18%;
+        flex-direction: column;
     }
-    .WhatsApp {
-        right: 15px;
-        bottom: 15px;
-    }   
-    .WhatsApp img {
-        width: 50px;
+    
+    /* ELEMENTOS GERAIS, mudanças recentes*/
+    .titulo-destacado {
+        font-size: 22px !important;
+        padding-top: 5% !important;
+        line-height: 1.3;
     }
-}
-
-/* Aqui funciona na cell pequenos*/
-@media screen and (max-width: 480px) {
-    .carousel-item img {
-        height: 200px;
+    
+    h3 {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
     }
-    .banner img{
-        width: 110%;
-        height: 110%;
-        margin-top: 31%;
+    
+    .final-ajuda {
+        font-family: sans-serif;
+        font-size: 18px !important;
     }
-    .carousel p {
-        font-size: 16px;
-        padding: 10px;
-            border: 3px solid rgb(42, 14, 201);
-            border-radius: 10px;
-            background-color: rgb(42, 14, 201);
-            color: white;
-           font-family: 'open_sansligh';
-            text-transform: uppercase;    
-    }
-    .titulo-pergunta {
-        font-size: 1.5rem;
-        padding: 10px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .list-perguntas h3 {
+    
+    .promo h2 {
         font-size: 1.2rem;
     }
-    .galeria-projetos {
-        column-count: 2;
-    } 
-    .promo h2 {
-        font-size: 1.5rem;
-    }
+    
     .promo p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
+    
     .saiba-mais {
         padding: 8px 12px;
         font-size: 0.9rem;
     }
-    .sobre-nos h5 {
-        font-size: 1.8rem;
-        margin-top: 10px;
+    
+    /* IMAGEM  */
+    
+    .sistemas-fotovoltaicos img {
+        width: 100% !important;
+        margin: 0 !important;
     }
-    .sobre-nos p {
-        font-size: 1rem;
+    
+    /*WHATSAPP */
+    .WhatsApp img {
+        width: 50px !important;
     }
 }
 
-
-
-/* Melhorias específicas para orientação paisagem */
-@media screen and (max-width: 768px) and (orientation: landscape) {
+/*  PARA TABLETS (481px - 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .logo img {
+        width: 180px;
+        height: 180px;
+    }
+    
     .carousel-item img {
         height: 250px;
+        margin-top: 80px;
+    }
+    
+    .beneficios-energia {
+        flex: 1 1 45% !important;
     }
     
     .sobre-nos {
-        flex-direction: row;
+        gap: 20px;
+        padding: 30px !important;
+    }
+    
+    .imagem-empresa img {
+        width: 50% !important;
     }
 }
+
