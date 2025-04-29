@@ -442,7 +442,7 @@ a {
     .bi.bi-facebook,
     .bi.bi-whatsapp,
     .bi.bi-instagram {
-        display: none;
+       margin-top: -30%;
     }
     /*  CARROSSEL "SLIDES" */
     .carousel {
