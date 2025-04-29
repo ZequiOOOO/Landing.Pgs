@@ -442,7 +442,8 @@ a {
     .bi.bi-facebook,
     .bi.bi-whatsapp,
     .bi.bi-instagram {
-       margin-top: -30%;
+       margin-top: -28%;
+       padding-right: 20px;
     }
     /*  CARROSSEL "SLIDES" */
     .carousel {
