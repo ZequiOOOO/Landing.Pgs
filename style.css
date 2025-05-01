@@ -39,17 +39,6 @@ nav a {
     transition: color 0.3s ease;
 }
 
-b {
-    font-size: 24px;
-    color: #64acd2;
-}
-
-b {
-    border: 2px solid rgb(77, 27, 105);
-    border-radius: 10px;
-    background-color: rgb(77, 33, 102);
-    color: white;
-}
 
 .logo img {
     width: 300px;
