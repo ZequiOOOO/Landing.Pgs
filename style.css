@@ -554,14 +554,12 @@ a {
     .footer-dark {
         width: 110%;
         text-align: center;
-        padding: 45px 10%;
+        padding: 46px 14%;
         flex-direction: column;
         max-width: 120%;
     }
     
-    /*  ultimas mudanças... */
-  
-    
+    /*  Alterações que tive que adicionar ou até ajustar depois de quase tudo estar pronto... */
     /* IMAGEM  */
     .sistemas-fotovoltaicos img {
         width: 100% !important;
