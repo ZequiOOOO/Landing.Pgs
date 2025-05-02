@@ -552,11 +552,23 @@ a {
     }
     /*  FOOTER */
     .footer-dark {
-        width: 110%;
+        width: 110% !important;
+        padding: 20px 10px !important; 
+        flex-direction: column !important;
         text-align: center;
-        padding: 46px 14%;
-        flex-direction: column;
-        max-width: 120%;
+        gap: 20px;
+        box-sizing: border-box;
+        max-width: 120% !important;
+    }
+    /*remove as bolinhas * (topicos)*/
+    .footer-dark ul, .footer-dark li {
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    ul.footer-links {
+        font-size: 14px !important;
+        font-family: serif !important;
     }
     
     /*  Alterações que tive que adicionar ou até ajustar depois de quase tudo estar pronto... */
