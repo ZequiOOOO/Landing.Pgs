@@ -552,10 +552,11 @@ a {
     }
     /*  FOOTER */
     .footer-dark {
-        width: 100%;
+        width: 110%;
         text-align: center;
-        padding: 45px 18%;
+        padding: 45px 10%;
         flex-direction: column;
+        max-width: 120%;
     }
     
     /*  ultimas mudanças... */
